@@ -4,3 +4,9 @@ type Book {
   pageCount: Int
   author: Author
 }
+
+input BookForm {
+  pageCount: Int
+  name: String
+  authorId: ID
+}

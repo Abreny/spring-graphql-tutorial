@@ -1,0 +1,4 @@
+type Mutation {
+    createAuthor(author: AuthorForm): Author
+    createBook(book: BookForm): Book
+}

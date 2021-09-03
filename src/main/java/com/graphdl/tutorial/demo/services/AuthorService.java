@@ -3,6 +3,7 @@ package com.graphdl.tutorial.demo.services;
 import java.util.List;
 
 import com.graphdl.tutorial.demo.entities.Author;
+import com.graphdl.tutorial.demo.forms.AuthorForm;
 import com.graphdl.tutorial.demo.repositories.AuthorRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,5 +15,9 @@ public class AuthorService {
 
     public List<Author> getAll() {
         return authorRepository.findAll();
+    }
+
+    public Author save(AuthorForm form) {
+        return authorRepository.save(form.toAuthor(null));
     }
 }
